@@ -19,7 +19,7 @@ const tooltip = d3.select("body")
     .attr("class", "tooltip")
     .style("opacity", 0);
 // Data
-d3.csv("Data/road_accidents_data_preview.csv", row => {
+d3.csv("road_accidents_data_preview.csv", row => {
     let hour = NaN;
     if (row.Time) {
         const parts = row.Time.trim().split(":");
@@ -156,4 +156,5 @@ d3.csv("Data/road_accidents_data_preview.csv", row => {
         .style("font-size", "14px")
         .style("alignment-baseline", "middle");
 });
+
 
